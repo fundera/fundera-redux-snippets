@@ -1,0 +1,14 @@
+{
+  "name": "funder-redux-snippets",
+  "version": "0.0.1",
+  "description": "Fundera Redux snippets",
+  "keywords": [
+  ],
+  "repository": "https://github.com/atom/funder-redux-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

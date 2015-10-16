@@ -1,0 +1,48 @@
+'.source.js':
+
+  'create action':
+    prefix: 'rfact'
+    body: '''
+      export const $1 = "$1";
+      function $2($3) {
+        return { type: $1, $3 };
+      }
+    '''
+
+  'create async action':
+    prefix: 'rfaact'
+    body: '''
+      export function $1() {
+        return function (dispatch) {
+          ApiUtil.$2()
+          .then( (res) => {
+            dispatch($3(res);
+          });
+        };
+      }
+    '''
+
+  'reducer':
+    prefix: 'rfred'
+    body: '''
+      function $1 ( state = [], action ) {
+          switch(action.type) {
+
+          default:
+            return state;
+          }
+      }
+    '''
+
+  'reducer action':
+    prefix: 'rfredact'
+    body: '''
+      case types.$1:
+        return ;
+    '''
+
+  'dispatch action':
+    prefix: 'rfdact'
+    body: '''
+      on$1={ $2 => dispatch(actions.$3.$1($2)}
+    '''
